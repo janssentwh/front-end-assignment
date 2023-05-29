@@ -4,6 +4,7 @@ export type MoviePropsType = {
   Awards: string;
   Poster: string;
   Plot: string;
+  Type?: string;
   Released?: string;
   Rated?: string;
   Genre?: string;

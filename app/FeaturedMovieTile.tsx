@@ -18,22 +18,26 @@ export default function FeaturedMovieTile({
       overflow="hidden"
       flexDir={{ base: "column", md: "row" }}
     >
-      <Image
-        src={Poster}
-        alt={Plot}
-        width="200"
-        height="300"
-        style={{
-          objectFit: "cover",
-        }}
-      />
+      {Poster.includes("http") ? (
+        <Image
+          src={Poster}
+          alt={`Poster for: ${Title}`}
+          width="200"
+          height="300"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      ) : (
+        <></>
+      )}
 
       <Flex p="6" flexDir={"column"} gap={4}>
         <Box fontWeight="semibold" as="h3" lineHeight="tight" noOfLines={1}>
           {Title}
         </Box>
         <Box display="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="teal">
+          <Badge borderRadius="full" px="2" colorScheme="yellow">
             Featured
           </Badge>
           <Box

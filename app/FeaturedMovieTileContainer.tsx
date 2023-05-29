@@ -13,13 +13,13 @@ export default function FeaturedMovieTileContainer() {
   if (error || !data) return <>error</>;
 
   return (
-    <Box>
+    <Box pb={4}>
       <Heading as="h2" mb={4}>
         Featured movies
       </Heading>
       <Flex flexDir={{ base: "column", lg: "row" }} gap={"4"}>
-        {data.map(({ movie }: { movie: MovieTileProps }) => {
-          return <MovieTile {...movie} />;
+        {data.map(({ movie }: { movie: MovieTileProps }, key) => {
+          return <MovieTile {...movie} key={key} />;
         })}
       </Flex>
     </Box>

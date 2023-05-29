@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@chakra-ui/next-js";
-import { Container, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
 const navItems = [
   {
@@ -16,12 +16,10 @@ const navItems = [
 
 export default function Navigation() {
   return (
-    <Container>
-      <Stack spacing={4} direction="row" align="center">
-        {navItems.map(({ title, href }) => {
-          return <Link href={href}>{title}</Link>;
-        })}
-      </Stack>
-    </Container>
+    <Stack spacing={4} direction="row" align="center">
+      {navItems.map(({ title, href }) => {
+        return <Link href={href}>{title}</Link>;
+      })}
+    </Stack>
   );
 }

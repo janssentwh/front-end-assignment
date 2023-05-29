@@ -18,8 +18,8 @@ export default function FeaturedMovieTileContainer() {
         Featured movies
       </Heading>
       <Flex flexDir={{ base: "column", lg: "row" }} gap={"4"}>
-        {data.map(({ movie }: { movie: MovieTileProps }, key) => {
-          return <MovieTile {...movie} key={key} />;
+        {data.map(({ movie }: { movie: MovieTileProps }) => {
+          return <MovieTile {...movie} key={movie.imdbID} />;
         })}
       </Flex>
     </Box>

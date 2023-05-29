@@ -18,7 +18,11 @@ export default function Navigation() {
   return (
     <Stack spacing={4} direction="row" align="center">
       {navItems.map(({ title, href }) => {
-        return <Link href={href}>{title}</Link>;
+        return (
+          <Link href={href} key={title + href}>
+            {title}
+          </Link>
+        );
       })}
     </Stack>
   );

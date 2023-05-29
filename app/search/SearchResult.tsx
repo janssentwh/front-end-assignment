@@ -42,13 +42,13 @@ export const SearchResult = ({
         <Box fontWeight="semibold" as="h3" lineHeight="tight" noOfLines={1}>
           {Title} ({Released})
         </Box>
-        <Box fontSize="xs" alignSelf={""}>
+        <Box fontSize="xs">
           Director:{" "}
           <Box as="span" color="gray.600">
             {Director}
           </Box>
         </Box>
-        <Box fontSize="xs" alignSelf={""} mb={2}>
+        <Box fontSize="xs" mb={2}>
           Casting:{" "}
           <Box as="span" color="gray.600">
             {Actors}

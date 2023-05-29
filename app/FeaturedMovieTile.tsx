@@ -2,13 +2,12 @@ import { Image } from "@chakra-ui/next-js";
 
 import { Box, Badge, Flex } from "@chakra-ui/react";
 
-import { MovieTileProps } from "./MovieTileProps";
+import { MovieTileProps } from "./MovieTilePropsType";
 
-export default function MovieTile({
+export default function FeaturedMovieTile({
   Title,
   Year,
   Awards,
-  Released,
   Poster,
   Plot,
 }: MovieTileProps) {
@@ -17,7 +16,7 @@ export default function MovieTile({
       borderWidth="1px"
       borderRadius="lg"
       overflow="hidden"
-      flexDir={["column", "row"]}
+      flexDir={{ base: "column", md: "row" }}
     >
       <Image
         src={Poster}
@@ -49,9 +48,9 @@ export default function MovieTile({
           </Box>
         </Box>
 
-        <Box maxW="60ch">{Plot}</Box>
+        <Box maxW="40ch">{Plot}</Box>
 
-        <Box fontSize="xs" alignSelf={"bottom"}>
+        <Box fontSize="xs" alignSelf={""}>
           Awards:{" "}
           <Box as="span" color="gray.600">
             {Awards}

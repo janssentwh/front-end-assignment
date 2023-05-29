@@ -1,4 +1,4 @@
-export type MovieTileProps = {
+export type MoviePropsType = {
   Title: string;
   Year: string;
   Awards: string;
@@ -9,8 +9,4 @@ export type MovieTileProps = {
   Genre?: string;
   Director?: string;
   Actors?: string;
-};
-
-export type MovieTileContainerProps = {
-  movies: MovieTileProps[];
 };

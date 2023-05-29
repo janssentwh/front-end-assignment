@@ -1,15 +1,20 @@
 import { useContext } from "react";
 import { SearchContext } from "./SearchContext";
 import { SearchResult } from "./SearchResult";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Spinner } from "@chakra-ui/react";
 import { MoviePropsType } from "../MoviePropsType";
 
 export const SearchResults = () => {
-  const { searchTerm, searchResults, isLoading, error } =
+  const { searchTerm, searchResults, isLoading, error, debouncedUrl } =
     useContext(SearchContext);
 
-  if (isLoading) return <>Loading...</>;
-  if (!searchResults && !isLoading && searchTerm.searchTerm.length)
+  if (isLoading) return <Spinner size="xl" />;
+  if (
+    !searchResults &&
+    !isLoading &&
+    searchTerm.searchTerm.length > 2 &&
+    !debouncedUrl
+  )
     return (
       <>
         We could not find anything for "{searchTerm.searchTerm}", please try

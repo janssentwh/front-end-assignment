@@ -1,6 +1,6 @@
 import { useFindMoviesByIds } from "@/lib/useFindMoviesByIds";
 import MovieTile from "./FeaturedMovieTile";
-import { Flex, Box, Heading } from "@chakra-ui/react";
+import { Flex, Box, Heading, Spinner } from "@chakra-ui/react";
 import { MovieTileProps } from "./MovieTilePropsType";
 
 export default function FeaturedMovieTileContainer() {
@@ -9,7 +9,7 @@ export default function FeaturedMovieTileContainer() {
     "tt1856101",
   ]);
 
-  if (isLoading) return <>Loading</>;
+  if (isLoading) return <Spinner size="xl" />;
   if (error || !data) return <>error</>;
 
   return (

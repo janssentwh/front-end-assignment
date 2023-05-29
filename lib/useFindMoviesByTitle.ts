@@ -38,5 +38,5 @@ export function useFindMoviesByTitle(title: string) {
     fetcher
   );
 
-  return { data, error, isLoading: isLoading && debouncedUrl };
+  return { data, error, isLoading, debouncedUrl };
 }

@@ -9,7 +9,7 @@ export default function search() {
   return (
     <main>
       <SearchContextProvider>
-        <Container maxW="1280px">
+        <Container maxW="1080px">
           <Stack gap={4}>
             <SearchBar />
             <Heading as="h2">Search results</Heading>

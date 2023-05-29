@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 
 export default function MenuBar() {
   return (
-    <Container maxW="1280px" p={4} mb={4}>
+    <Container maxW="1080px" p={4} mb={4}>
       <Stack spacing={4} direction="row" align="center">
         <Navigation />
       </Stack>

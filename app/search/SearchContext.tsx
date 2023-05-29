@@ -12,6 +12,7 @@ export const SearchContext = createContext({});
 
 export const SearchContextProvider = ({ children }: Props) => {
   const [searchTerm, setSearchTerm] = useState("");
+
   const {
     data: searchResults,
     error,

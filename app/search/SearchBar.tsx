@@ -2,13 +2,7 @@
 
 import { useContext } from "react";
 
-import {
-  InputGroup,
-  InputLeftElement,
-  Input,
-  InputRightAddon,
-  Button,
-} from "@chakra-ui/react";
+import { InputGroup, InputLeftElement, Input } from "@chakra-ui/react";
 
 import { SearchIcon } from "@chakra-ui/icons";
 import { SearchContext } from "./SearchContext";
@@ -34,15 +28,6 @@ export const SearchBar = () => {
         value={searchTerm.searchTerm}
         onChange={handleChange}
       />
-      {/* <InputRightAddon p={0} border="none">
-        <Button
-          colorScheme="yellow"
-          borderLeftRadius={0}
-          borderRightRadius={3.3}
-        >
-          Search
-        </Button>
-      </InputRightAddon> */}
     </InputGroup>
   );
 };

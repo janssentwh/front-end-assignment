@@ -1,4 +1,4 @@
-export type MoviePropsType = {
+export type MovieType = {
   Title: string;
   Year: string;
   Awards: string;
@@ -10,4 +10,7 @@ export type MoviePropsType = {
   Genre?: string;
   Director?: string;
   Actors?: string;
+  imdbID?: string;
 };
+
+export type MoviePropsType = Omit<MovieType, "imdbID">;
